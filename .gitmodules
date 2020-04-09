@@ -1,0 +1,3 @@
+[submodule "FjtFramework"]
+	path = FjtFramework
+	url = https://github.com/takint/FjtFramework.git
