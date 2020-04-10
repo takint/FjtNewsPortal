@@ -1,6 +1,11 @@
 ﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */
 
+
+/*Primary color #ce0000*/
+/*Secondary color #383838*/
+/*Gray color #d1cfd0*/
+
 a.navbar-brand {
   white-space: normal;
   text-align: center;
@@ -8,8 +13,9 @@ a.navbar-brand {
 }
 
 /* Provide sufficient contrast against white background */
-a {
-  color: #0366d6;
+a, a:hover {
+    color: #0366d6;
+    text-decoration: none;
 }
 
 .btn-primary {
@@ -68,4 +74,59 @@ body {
   width: 100%;
   white-space: nowrap;
   line-height: 60px; /* Vertically center the text there */
+}
+
+/*Header section*/
+.portal-logo-box {
+    align-self: center;
+}
+
+    .portal-logo-box > img {
+        width: 100%
+    }
+
+.top-banner-box img {
+    width: 100%
+}
+
+.portal-top-menu {
+    height: 45px;
+    background: #ce0000;
+    margin: .25rem 0;
+}
+
+    .portal-top-menu a {
+        text-decoration: none;
+        color: #fff;
+        padding:0.5rem;
+    }
+
+        .portal-top-menu a:hover {
+            color: #d1cfd0;
+        }
+
+    .portal-top-menu a img {
+       width: 25px;
+    }
+
+
+.portal-footer-box {
+    background: #383838;
+    border-bottom: 0.5rem solid #ce0000;
+}
+
+    .portal-footer-box a {
+        color: #fff;
+        text-decoration: none;
+    }
+
+        .portal-footer-box a:hover {
+            color: #d1cfd0;
+        }
+
+
+.footer-menu-box {
+    margin: 1rem 0;
+    padding: 0 1rem;
+    border-left: 1.5px solid #fff;
 }
