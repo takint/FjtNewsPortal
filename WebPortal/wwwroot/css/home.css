@@ -1,1 +1,32 @@
-﻿
+﻿/*Primary color #ce0000*/
+/*Secondary color #383838*/
+/*Gray color #d1cfd0*/
+
+.feature-news-box h3 {
+    color: #ce0000;
+}
+
+.list-new-box {
+    border-left: 1px solid #d1cfd0;
+    padding-left: 1rem;
+}
+
+    .list-new-box a {
+        color: #383838;
+    }
+
+    .list-new-box a:hover {
+        color: #ce0000;
+    }
+
+    .list-new-box ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .list-new-box ul li:not(:last-child) {
+        line-height: 1.75rem;
+        border-bottom: 1px solid #d1cfd0;
+        overflow: hidden;
+        text-overflow:ellipsis;
+    }
