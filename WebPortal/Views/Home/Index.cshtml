@@ -7,21 +7,63 @@
 }
 
 <!--Row 1-->
-<div class="row">
-    <div class="col-8">
+<div class="row mb-2">
+    <div class="col-8 border-bottom">
         <div class="row">
             <div class="col-8">
-                <div class="feature-news-box">
-                    <img width="100%" src="~/assets/feature-1.jpg" />
-                    <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Praesent pharetra libero elit, commodo pretium erat placerat ut.
-                    </p>
+                <div class="feature-news-box border-right">
+                    <ul class="nav nav-pills mb-2 mt-1 features-list" id="pills-tab" role="tablist">
+                        <li>
+                            <a class="active" id="pills-feature1-tab" data-toggle="pill" href="#pills-feature1" role="tab" aria-controls="pills-feature1" aria-selected="true">Thời sự</a>
+                        </li>
+                        <li>
+                            <a id="pills-feature2-tab" data-toggle="pill" href="#pills-feature2" role="tab" aria-controls="pills-feature2" aria-selected="false">Thông tin COVID-19</a>
+                        </li>
+                        <li>
+                            <a id="pills-feature3-tab" data-toggle="pill" href="#pills-feature3" role="tab" aria-controls="pills-feature3" aria-selected="false">Sản xuất Vaccine</a>
+                        </li>
+                        <li>
+                            <a id="pills-feature4-tab" data-toggle="pill" href="#pills-feature4" role="tab" aria-controls="pills-feature4" aria-selected="false">Kinh tế</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content" id="pills-tabContent">
+                        <div class="tab-pane fade show active" id="pills-feature1" role="tabpanel" aria-labelledby="pills-feature1-tab">
+                            <img src="~/assets/feature-1.jpg" />
+                            <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                Praesent pharetra libero elit, commodo pretium erat placerat ut.
+                            </p>
+                        </div>
+                        <div class="tab-pane fade" id="pills-feature2" role="tabpanel" aria-labelledby="pills-feature2-tab">
+                            <img src="~/assets/feature-2.jpg" />
+                            <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                Praesent pharetra libero elit, commodo pretium erat placerat ut.
+                            </p>
+                        </div>
+                        <div class="tab-pane fade" id="pills-feature3" role="tabpanel" aria-labelledby="pills-feature3-tab">
+                            <img src="~/assets/feature-3.jpg" />
+                            <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                Praesent pharetra libero elit, commodo pretium erat placerat ut.
+                            </p>
+                        </div>
+                        <div class="tab-pane fade" id="pills-feature4" role="tabpanel" aria-labelledby="pills-feature4-tab">
+                            <img src="~/assets/feature-4.jpg" />
+                            <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                Praesent pharetra libero elit, commodo pretium erat placerat ut.
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="col-4">
-                <div class="list-new-box">
+                <div class="list-news-box">
                     <ul>
                         <li><a href="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
                         <li><a href="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
@@ -37,224 +79,331 @@
     </div>
     <div class="col-4 border-left">
         <div class="home-adv-box">
-            <img width="100%" src="~/assets/adv1.png" />
-            <img width="100%" src="~/assets/adv2.png" />
+            <img src="~/assets/adv1.png" />
+            <img src="~/assets/adv2.png" />
         </div>
     </div>
 </div>
 <!--Row 2-->
 <div class="row">
-    <div class="col-8">
-        <div class="row">
-            <div class="col-8">
-                <div class="feature-news-box">
-                    <img width="100%" src="~/assets/feature-1.jpg" />
-                    <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
+    <div class="col-6">
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+                <h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h5>
+                <div class="news-box">
+                    <img src="~/assets/feature-2.jpg" />
                     <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Praesent pharetra libero elit, commodo pretium erat placerat ut.
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                         Praesent pharetra libero elit, commodo pretium erat placerat ut.
                     </p>
                 </div>
-            </div>
-            <div class="col-4">
-                <div class="list-new-box">
-                    <ul>
-                        <li><a href="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
-                        <li><a href="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
-                        <li><a href="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
-                        <li><a href="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
-                        <li><a href="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
-                        <li><a href="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
-                        <li><a href="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
-                    </ul>
+            </li>
+            <li class="list-group-item">
+                <h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h5>
+                <div class="news-box">
+                    <img src="~/assets/feature-2.jpg" />
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Praesent pharetra libero elit, commodo pretium erat placerat ut.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Praesent pharetra libero elit, commodo pretium erat placerat ut.
+                    </p>
                 </div>
-            </div>
+            </li>
+            <li class="list-group-item">
+                <h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h5>
+                <div class="news-box">
+                    <img src="~/assets/feature-2.jpg" />
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Praesent pharetra libero elit, commodo pretium erat placerat ut.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Praesent pharetra libero elit, commodo pretium erat placerat ut.
+                    </p>
+                </div>
+            </li>
+            <li class="list-group-item">
+                <h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h5>
+                <div class="news-box">
+                    <img src="~/assets/feature-2.jpg" />
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Praesent pharetra libero elit, commodo pretium erat placerat ut.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Praesent pharetra libero elit, commodo pretium erat placerat ut.
+                    </p>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="col-3">
+        <div class="media-news-box">
+            <img src="~/assets/media-news.jpg" />
+        </div>
+        <div class="list-news-box">
+            <ul>
+                <li><a href="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
+                <li><a href="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
+                <li><a href="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
+                <li><a href="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
+                <li><a href="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
+                <li><a href="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
+                <li><a href="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
+            </ul>
         </div>
     </div>
-    <div class="col-4 border-left">
-        <div class="home-adv-box">
-            <img width="100%" src="~/assets/adv1.png" />
-            <img width="100%" src="~/assets/adv2.png" />
+    <div class="col-3">
+        <div class="media-news-box">
+            <img src="~/assets/media-news2.jpg" />
+        </div>
+        <div class="list-news-box">
+            <ul>
+                <li><a href="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
+                <li><a href="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
+                <li><a href="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
+                <li><a href="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
+                <li><a href="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
+                <li><a href="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
+                <li><a href="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
+            </ul>
         </div>
     </div>
 </div>
 <!--Row 3-->
 <div class="row">
-    <div class="col-8">
-        <div class="row">
-            <div class="col-8">
-                <div class="feature-news-box">
-                    <img width="100%" src="~/assets/feature-1.jpg" />
-                    <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Praesent pharetra libero elit, commodo pretium erat placerat ut.
-                    </p>
-                </div>
-            </div>
-            <div class="col-4">
-                <div class="list-new-box">
-                    <ul>
-                        <li><a href="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
-                        <li><a href="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
-                        <li><a href="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
-                        <li><a href="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
-                        <li><a href="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
-                        <li><a href="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
-                        <li><a href="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
-                    </ul>
-                </div>
-            </div>
+    <div class="col-4 d-flex">
+        <div class="adv-box">
+            <img src="~/assets/adv3.png" />
         </div>
     </div>
-    <div class="col-4 border-left">
-        <div class="home-adv-box">
-            <img width="100%" src="~/assets/adv1.png" />
-            <img width="100%" src="~/assets/adv2.png" />
+    <div class="col-4 d-flex">
+        <div class="adv-box">
+            <img src="~/assets/adv4.png" />
+        </div>
+    </div>
+    <div class="col-4 d-flex">
+        <div class="adv-box">
+            <img src="~/assets/adv5.png" />
         </div>
     </div>
 </div>
 <!--Row 4-->
 <div class="row">
-    <div class="col-8">
-        <div class="row">
-            <div class="col-8">
-                <div class="feature-news-box">
-                    <img width="100%" src="~/assets/feature-1.jpg" />
-                    <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Praesent pharetra libero elit, commodo pretium erat placerat ut.
-                    </p>
-                </div>
-            </div>
-            <div class="col-4">
-                <div class="list-new-box">
-                    <ul>
-                        <li><a href="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
-                        <li><a href="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
-                        <li><a href="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
-                        <li><a href="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
-                        <li><a href="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
-                        <li><a href="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
-                        <li><a href="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
-                    </ul>
-                </div>
-            </div>
+    <div class="col-4">
+        <div class="media-news-box">
+            <img src="~/assets/media-news.jpg" />
+        </div>
+        <div class="list-news-box">
+            <ul>
+                <li><a href="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
+                <li><a href="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
+                <li><a href="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
+                <li><a href="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
+                <li><a href="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
+                <li><a href="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
+                <li><a href="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
+            </ul>
         </div>
     </div>
-    <div class="col-4 border-left">
-        <div class="home-adv-box">
-            <img width="100%" src="~/assets/adv1.png" />
-            <img width="100%" src="~/assets/adv2.png" />
+    <div class="col-4">
+        <div class="media-news-box">
+            <img src="~/assets/media-news2.jpg" />
+        </div>
+        <div class="list-news-box">
+            <ul>
+                <li><a href="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
+                <li><a href="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
+                <li><a href="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
+                <li><a href="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
+                <li><a href="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
+                <li><a href="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
+                <li><a href="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="col-4">
+        <div class="media-news-box">
+            <img src="~/assets/media-news3.jpg" />
+        </div>
+        <div class="list-news-box">
+            <ul>
+                <li><a href="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
+                <li><a href="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
+                <li><a href="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
+                <li><a href="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
+                <li><a href="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
+                <li><a href="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
+                <li><a href="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
+            </ul>
         </div>
     </div>
 </div>
 <!--Row 5-->
 <div class="row">
-    <div class="col-8">
-        <div class="row">
-            <div class="col-8">
-                <div class="feature-news-box">
-                    <img width="100%" src="~/assets/feature-1.jpg" />
-                    <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Praesent pharetra libero elit, commodo pretium erat placerat ut.
-                    </p>
-                </div>
-            </div>
-            <div class="col-4">
-                <div class="list-new-box">
-                    <ul>
-                        <li><a href="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
-                        <li><a href="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
-                        <li><a href="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
-                        <li><a href="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
-                        <li><a href="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
-                        <li><a href="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
-                        <li><a href="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
-                    </ul>
-                </div>
-            </div>
+    <div class="col-4">
+        <div class="media-news-box">
+            <img src="~/assets/media-news4.jpg" />
+        </div>
+        <div class="list-news-box">
+            <ul>
+                <li><a href="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
+                <li><a href="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
+                <li><a href="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
+                <li><a href="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
+                <li><a href="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
+                <li><a href="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
+                <li><a href="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
+            </ul>
         </div>
     </div>
-    <div class="col-4 border-left">
-        <div class="home-adv-box">
-            <img width="100%" src="~/assets/adv1.png" />
-            <img width="100%" src="~/assets/adv2.png" />
+    <div class="col-4">
+        <div class="media-news-box">
+            <img src="~/assets/feature-3.jpg" />
+        </div>
+        <div class="list-news-box">
+            <ul>
+                <li><a href="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
+                <li><a href="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
+                <li><a href="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
+                <li><a href="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
+                <li><a href="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
+                <li><a href="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
+                <li><a href="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="col-4">
+        <div class="media-news-box">
+            <img src="~/assets/feature-4.jpg" />
+        </div>
+        <div class="list-news-box">
+            <ul>
+                <li><a href="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
+                <li><a href="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
+                <li><a href="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
+                <li><a href="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
+                <li><a href="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
+                <li><a href="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
+                <li><a href="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
+            </ul>
         </div>
     </div>
 </div>
 <!--Row 6-->
 <div class="row">
-    <div class="col-8">
+    <div class="col-7">
         <div class="row">
-            <div class="col-8">
-                <div class="feature-news-box">
-                    <img width="100%" src="~/assets/feature-1.jpg" />
-                    <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Praesent pharetra libero elit, commodo pretium erat placerat ut.
-                    </p>
+            <div class="col-12">
+                <div class="media-news-box">
+                    <img src="~/assets/media-news5.png" />
                 </div>
+                <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h4>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Praesent pharetra libero elit, commodo pretium erat placerat ut.
+                </p>
             </div>
-            <div class="col-4">
-                <div class="list-new-box">
-                    <ul>
-                        <li><a href="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
-                        <li><a href="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
-                        <li><a href="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
-                        <li><a href="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
-                        <li><a href="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
-                        <li><a href="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
-                        <li><a href="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
-                    </ul>
-                </div>
+        </div>
+        <div class="row">
+            <div class="col-5">
+                <img src="~/assets/feature-4.jpg" />
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Praesent pharetra libero elit, commodo pretium erat placerat ut.
+                </p>
+            </div>
+            <div class="col-7">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                        <div class="news-box">
+                            <img src="~/assets/feature-2.jpg" />
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="news-box">
+                            <img src="~/assets/feature-2.jpg" />
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        </div>
+                    </li>
+                </ul>
             </div>
         </div>
     </div>
-    <div class="col-4 border-left">
-        <div class="home-adv-box">
-            <img width="100%" src="~/assets/adv1.png" />
-            <img width="100%" src="~/assets/adv2.png" />
+    <div class="col-5">
+        <div class="vert-adv-box">
+            <img src="~/assets/adv6.png" />
+            <img src="~/assets/adv7.png" />
+            <img src="~/assets/adv8.png" />
         </div>
     </div>
 </div>
 <!--Row 7-->
-<div class="row">
-    <div class="col-8">
-        <div class="row">
-            <div class="col-8">
-                <div class="feature-news-box">
-                    <img width="100%" src="~/assets/feature-1.jpg" />
-                    <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Praesent pharetra libero elit, commodo pretium erat placerat ut.
-                    </p>
-                </div>
-            </div>
-            <div class="col-4">
-                <div class="list-new-box">
-                    <ul>
-                        <li><a href="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
-                        <li><a href="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
-                        <li><a href="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
-                        <li><a href="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
-                        <li><a href="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
-                        <li><a href="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
-                        <li><a href="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
-                    </ul>
-                </div>
-            </div>
+<div class="row mt-1 mb-1">
+    <h4 class="media-header">Thông tin doanh nghiệp</h4>
+    <div class="col-3">
+        <img src="~/assets/feature-4.jpg" />
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Praesent pharetra libero elit, commodo pretium erat placerat ut.
+        </p>
+    </div>
+    <div class="col-3">
+        <img src="~/assets/feature-2.jpg" />
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Praesent pharetra libero elit, commodo pretium erat placerat ut.
+        </p>
+    </div>
+    <div class="col-3">
+        <img src="~/assets/feature-1.jpg" />
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Praesent pharetra libero elit, commodo pretium erat placerat ut.
+        </p>
+    </div>
+    <div class="col-3">
+        <img src="~/assets/feature-3.jpg" />
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Praesent pharetra libero elit, commodo pretium erat placerat ut.
+        </p>
+    </div>
+</div>
+<div class="row mt-1 mb-1">
+    <h4 class="media-header">Shopping online</h4>
+    <div class="col-3">
+        <div class="news-box">
+            <img src="~/assets/feature-2.jpg" />
+            <p>
+                <a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a>
+            </p>
         </div>
     </div>
-    <div class="col-4 border-left">
-        <div class="home-adv-box">
-            <img width="100%" src="~/assets/adv1.png" />
-            <img width="100%" src="~/assets/adv2.png" />
+    <div class="col-3">
+        <div class="news-box">
+            <img src="~/assets/feature-2.jpg" />
+            <p>
+                <a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a>
+            </p>
+        </div>
+    </div>
+    <div class="col-3">
+        <div class="news-box">
+            <img src="~/assets/feature-2.jpg" />
+            <p>
+                <a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a>
+            </p>
+        </div>
+    </div>
+    <div class="col-3">
+        <div class="news-box">
+            <img src="~/assets/feature-2.jpg" />
+            <p>
+                <a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a>
+            </p>
         </div>
     </div>
 </div>

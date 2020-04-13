@@ -6,6 +6,10 @@ for details on configuring this project to bundle and minify static web assets. 
 /*Secondary color #383838*/
 /*Gray color #d1cfd0*/
 
+img {
+    width: 100%;
+}
+
 a.navbar-brand {
   white-space: normal;
   text-align: center;
@@ -81,13 +85,6 @@ body {
     align-self: center;
 }
 
-    .portal-logo-box > img {
-        width: 100%
-    }
-
-.top-banner-box img {
-    width: 100%
-}
 
 .portal-top-menu {
     height: 45px;
