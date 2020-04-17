@@ -51,6 +51,11 @@ ul.features-list a {
         text-overflow: ellipsis;
     }
 
+.list-news-banner {
+    width: 300px;
+    height: 50px;
+}
+
 
 .news-box {
     display: flex;

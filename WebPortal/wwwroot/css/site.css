@@ -96,6 +96,7 @@ body {
         text-decoration: none;
         color: #fff;
         padding:0.5rem;
+        margin: 0 0.25rem;
     }
 
         .portal-top-menu a:hover {
@@ -126,4 +127,24 @@ body {
     margin: 1rem 0;
     padding: 0 1rem;
     border-left: 1.5px solid #fff;
+}
+
+
+.social-connect-box {
+    font-size: 2rem;
+    text-align: right;
+}
+
+    .social-connect-box a {
+        color: #383838;
+    }
+
+@media (max-width: 1024px) {
+    .portal-top-menu a {
+        margin: 0;
+    }
+
+    .portal-top-menu div {
+        visibility:hidden;
+    }
 }

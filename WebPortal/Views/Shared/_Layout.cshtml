@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>VNToday - @ViewData["Title"]</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/all.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
     @RenderSection("PageStyles", required: false)
 </head>
@@ -27,7 +28,7 @@
             </div>
         </div>
         <nav class="nav nav-fill justify-content-center align-items-center portal-top-menu">
-            <div class="d-flex justify-content-between w-75">
+            <div class="d-flex justify-content-between">
                 <a href="/"><img src="~/assets/home-icon.png"></a>
                 <a href="/">Tin tức</a>
                 <a href="/">Thời sự</a>
@@ -59,7 +60,13 @@
             </div>
             <div class="col-9 d-flex flex-column justify-content-center">
                 <div class="row border-top">
-                    <div class="col-3 border-right mt-3"></div>
+                    <div class="col-3 border-right mt-3 d-flex flex-column justify-content-center">
+                        <div class="social-connect-box">
+                            <a href="#"><i class="fab  fa-facebook-square"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
                     <div class="col-3 mt-3">
                         <p>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
