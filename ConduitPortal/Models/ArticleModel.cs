@@ -1,5 +1,4 @@
 ﻿using FjtFramework.Cores;
-using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
@@ -17,19 +16,22 @@ namespace ConduitPortal.Models
 
         public string Body { get; set; }
 
-        public PersonModel Author { get; set; }
+        public string FeatureImage { get; set; }
 
-        public List<CommentModel> Comments { get; set; }
+        public ArticleStatus CurrentStatus { get; set; }
+
+        [ForeignKey("Author")]
+        public int AuthorId { get; set; }
+
+        public virtual PersonModel Author { get; set; }
+
+        public virtual ICollection<CommentModel> Comments { get; set; }
 
 
         [NotMapped]
         public List<string> TagList => (ArticleTags?.Select(x => x.TagId) ?? Enumerable.Empty<string>()).ToList();
 
         [JsonIgnore]
-        public List<ArticleTagModel> ArticleTags { get; set; }
-
-        public DateTime CreatedAt { get; set; }
-
-        public DateTime UpdatedAt { get; set; }
+        public virtual ICollection<ArticleTagModel> ArticleTags { get; set; }
     }
 }
