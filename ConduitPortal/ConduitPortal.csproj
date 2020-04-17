@@ -5,13 +5,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Mapping\" />
-    <Folder Include="ViewModels\" />
-    <Folder Include="Validation\" />
-    <Folder Include="Services\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\FjtFramework\FjtFramework.Core\FjtFramework.Core.csproj" />
   </ItemGroup>
 

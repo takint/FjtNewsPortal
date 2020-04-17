@@ -1,4 +1,5 @@
 ﻿using ConduitPortal.Models;
+using FjtFramework.Cores;
 using Microsoft.EntityFrameworkCore;
 
 namespace ConduitPortal
@@ -16,6 +17,12 @@ namespace ConduitPortal
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.ApplyConfiguration(new BaseEntityConfiguration<ArticleModel>());
+            modelBuilder.ApplyConfiguration(new BaseEntityConfiguration<ArticleTagModel>());
+            modelBuilder.ApplyConfiguration(new BaseEntityConfiguration<CommentModel>());
+            modelBuilder.ApplyConfiguration(new BaseEntityConfiguration<PersonModel>());
+            modelBuilder.ApplyConfiguration(new BaseEntityConfiguration<TagModel>());
+
             base.OnModelCreating(modelBuilder);
         }
 
