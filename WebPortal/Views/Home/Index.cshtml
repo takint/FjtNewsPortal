@@ -2,6 +2,8 @@
     ViewData["Title"] = "Home Page";
 }
 
+@model HomePageViewModel
+
 @section PageStyles{
     <link rel="stylesheet" href="~/css/home.css" />
 }
@@ -88,54 +90,15 @@
 <div class="row">
     <div class="col-6">
         <ul class="list-group list-group-flush">
-            <li class="list-group-item">
-                <h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h5>
-                <div class="news-box">
-                    <img src="~/assets/feature-2.jpg" />
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Praesent pharetra libero elit, commodo pretium erat placerat ut.
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Praesent pharetra libero elit, commodo pretium erat placerat ut.
-                    </p>
-                </div>
-            </li>
-            <li class="list-group-item">
-                <h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h5>
-                <div class="news-box">
-                    <img src="~/assets/feature-2.jpg" />
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Praesent pharetra libero elit, commodo pretium erat placerat ut.
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Praesent pharetra libero elit, commodo pretium erat placerat ut.
-                    </p>
-                </div>
-            </li>
-            <li class="list-group-item">
-                <h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h5>
-                <div class="news-box">
-                    <img src="~/assets/feature-2.jpg" />
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Praesent pharetra libero elit, commodo pretium erat placerat ut.
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Praesent pharetra libero elit, commodo pretium erat placerat ut.
-                    </p>
-                </div>
-            </li>
-            <li class="list-group-item">
-                <h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h5>
-                <div class="news-box">
-                    <img src="~/assets/feature-2.jpg" />
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Praesent pharetra libero elit, commodo pretium erat placerat ut.
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Praesent pharetra libero elit, commodo pretium erat placerat ut.
-                    </p>
-                </div>
-            </li>
+            @for (int i = 0; i < 5; i++)
+            {
+                <li class="list-group-item">
+                    <h5><a href="@Model.NewFeeds[i].Id">@Model.NewFeeds[i].Title.Text</a></h5>
+                    <div class="news-box">
+                        @Html.Raw(Model.NewFeeds[i].Summary.Text)
+                    </div>
+                </li>
+            }
         </ul>
     </div>
     <div class="col-3">

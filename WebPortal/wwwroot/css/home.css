@@ -2,14 +2,17 @@
 /*Secondary color #383838*/
 /*Gray color #d1cfd0*/
 
-h3, h4, h5 {
+h3, h4, h5, a {
     color: #ce0000;
 }
 
+    a:hover {
+        color: #d1cfd0;
+    }
 
-li.list-group-item {
-    padding: 0;
-}
+    li.list-group-item {
+        padding: 0;
+    }
 
 .feature-news-box {
     padding-right: 1rem;
@@ -62,6 +65,11 @@ ul.features-list a {
     flex-flow: row;
     justify-content: space-around;
 }
+
+    .news-box a {
+        width: 65%;
+        margin-right: 1rem;
+    }
 
     .news-box p {
         margin-left: 1rem;

@@ -1,4 +1,5 @@
 ﻿using FjtFramework.Cores;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Text.Json.Serialization;
 
 namespace ConduitPortal.Models
@@ -7,15 +8,12 @@ namespace ConduitPortal.Models
     {
         public string Body { get; set; }
 
-        public PersonModel Author { get; set; }
 
-        [JsonIgnore]
-        public int AuthorId { get; set; }
-
-        [JsonIgnore]
-        public ArticleModel Article { get; set; }
-
-        [JsonIgnore]
+        [ForeignKey("Article")]
         public int ArticleId { get; set; }
+
+
+        public virtual ArticleModel Article { get; set; }
+
     }
 }

@@ -1,13 +1,16 @@
 ﻿using FjtFramework.Cores;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ConduitPortal.Models
 {
     public class ArticleTagModel : Entity
     {
+        [ForeignKey("Article")]
         public int ArticleId { get; set; }
-        public ArticleModel Article { get; set; }
+        public virtual ArticleModel Article { get; set; }
 
-        public string TagId { get; set; }
-        public TagModel Tag { get; set; }
+        [ForeignKey("Tag")]
+        public int TagId { get; set; }
+        public virtual TagModel Tag { get; set; }
     }
 }

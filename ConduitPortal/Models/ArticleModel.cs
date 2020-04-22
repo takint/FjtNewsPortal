@@ -14,6 +14,7 @@ namespace ConduitPortal.Models
 
         public string Description { get; set; }
 
+        [Column(TypeName = "ntext")]
         public string Body { get; set; }
 
         public string FeatureImage { get; set; }
@@ -29,7 +30,7 @@ namespace ConduitPortal.Models
 
 
         [NotMapped]
-        public List<string> TagList => (ArticleTags?.Select(x => x.TagId) ?? Enumerable.Empty<string>()).ToList();
+        public List<int> TagList => (ArticleTags?.Select(x => x.TagId) ?? Enumerable.Empty<int>()).ToList();
 
         [JsonIgnore]
         public virtual ICollection<ArticleTagModel> ArticleTags { get; set; }

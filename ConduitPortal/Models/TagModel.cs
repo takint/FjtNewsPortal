@@ -7,6 +7,6 @@ namespace ConduitPortal.Models
     {
         public string TagId { get; set; }
 
-        public List<ArticleTagModel> ArticleTags { get; set; }
+        public virtual ICollection<ArticleTagModel> ArticleTags { get; set; }
     }
 }

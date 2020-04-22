@@ -5,6 +5,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Migrations\20200422052632_InitDb.cs" />
+    <Compile Remove="Migrations\20200422052632_InitDb.Designer.cs" />
+    <Compile Remove="Migrations\20200422054029_InitDb.cs" />
+    <Compile Remove="Migrations\20200422054029_InitDb.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\FjtFramework\FjtFramework.Core\FjtFramework.Core.csproj" />
   </ItemGroup>
 
