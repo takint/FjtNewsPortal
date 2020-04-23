@@ -13,32 +13,40 @@ using WebPortal.Models;
 
 namespace WebPortal.Controllers
 {
-    public class HomeController : Controller
+    public class HomeController : BaseController
     {
-        private readonly ILogger<HomeController> _logger;
+
         private readonly IArticleService _articleService;
-
+        private HomePageViewModel vmHome;
         public HomeController(ILogger<HomeController> logger, IArticleService articleService)
+            : base(logger)
         {
-            _logger = logger;
             _articleService = articleService;
+            vmHome = new HomePageViewModel();
+            vmHome.TopBannerImage = "/assets/top-banner-adv.png";
+            vmHome.SiteLogoImage = "/assets/portal-top-logo.png";
+            vmHome.FooterLogoImage = "/assets/portal-foot-logo.png";
         }
 
-        public async Task<IActionResult> Index()
+        public IActionResult Index()
         {
-            HomePageViewModel vm = new HomePageViewModel();
-            vm.NewFeeds = ReadNewFeeds();
-
-            return View(vm);
+            ReadNewFeeds();
+            return View(vmHome);
         }
 
-        private List<SyndicationItem> ReadNewFeeds()
+        private void ReadNewFeeds()
         {
             XmlReader reader = XmlReader.Create("D:\\Workshop\\GitRepo\\FjtNewsPortal\\WebPortal\\wwwroot\\assets\\tin-moi-nhat.rss");
-            SyndicationFeed feed = SyndicationFeed.Load(reader);
-            reader.Close();
+            vmHome.NewFeeds = SyndicationFeed.Load(reader).Items.ToList();
 
-            return feed.Items.ToList();
+
+            reader = XmlReader.Create("D:\\Workshop\\GitRepo\\FjtNewsPortal\\WebPortal\\wwwroot\\assets\\startup.rss");
+            vmHome.BusinessNews = SyndicationFeed.Load(reader).Items.ToList();
+
+            reader = XmlReader.Create("D:\\Workshop\\GitRepo\\FjtNewsPortal\\WebPortal\\wwwroot\\assets\\kinh-doanh.rss");
+            vmHome.ShoppingNews = SyndicationFeed.Load(reader).Items.ToList();
+
+            reader.Close();
         }
 
         public IActionResult Privacy()

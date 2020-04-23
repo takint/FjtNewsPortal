@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿@model LayoutViewModel
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -16,13 +17,13 @@
                 <div class="col-3 col-md-3 col-sm-6 d-flex">
                     <!--Will be managed on admin-->
                     <div class="portal-logo-box">
-                        <img src="~/assets/portal-top-logo.png" />
+                        <img src="@Model.SiteLogoImage" />
                     </div>
                 </div>
                 <div class="col-8 col-md-8 col-sm-6">
                     <!--Will be managed on admin-->
                     <div class="top-banner-box">
-                        <img src="~/assets/top-banner-adv.png" />
+                        <img src="@Model.TopBannerImage" />
                     </div>
                 </div>
             </div>
@@ -97,7 +98,7 @@
                     <div class="col-4 col-md-4 col-sm-6 d-flex">
                         <!--Will be managed on admin-->
                         <div class="portal-logo-box">
-                            <img src="~/assets/portal-foot-logo.png" />
+                            <img src="@Model.FooterLogoImage" />
                         </div>
                     </div>
                     <div class="col-8 col-md-8 col-sm-6">

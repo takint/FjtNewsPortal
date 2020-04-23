@@ -49,6 +49,7 @@ ul.features-list a {
 
     .list-news-box ul li:not(:last-child) {
         line-height: 1.75rem;
+        min-height: 3rem;
         border-bottom: 1px solid #d1cfd0;
         overflow: hidden;
         text-overflow: ellipsis;
