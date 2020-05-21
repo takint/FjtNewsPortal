@@ -1,0 +1,8 @@
+﻿@model ArticlePageViewModel
+
+@{
+    ViewData["Title"] = "VNToday - " + Model.ArticleVM.Title;
+}
+
+<h1>@Model.ArticleVM.Title</h1>
+@Html.Raw(Model.ArticleVM.Body)

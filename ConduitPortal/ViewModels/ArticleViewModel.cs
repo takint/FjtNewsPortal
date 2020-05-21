@@ -8,8 +8,17 @@ namespace ConduitPortal.ViewModels
 {
     public class ArticleViewModel : BaseViewModel
     {
+        public string Slug { get; set; }
 
+        public string Title { get; set; }
 
+        public string Description { get; set; }
+
+        public string Body { get; set; }
+
+        public string FeatureImage { get; set; }
+
+        public ArticleStatus CurrentStatus { get; set; }
 
         public void CreateMapping(Profile profile)
         {

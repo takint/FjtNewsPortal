@@ -3,10 +3,10 @@ using Microsoft.Extensions.Logging;
 
 namespace WebPortal.Controllers
 {
-    public class BaseController : Controller
+    public class BaseController<T> : Controller
     {
-        private readonly ILogger<HomeController> _logger;
-        public BaseController(ILogger<HomeController> logger)
+        private readonly ILogger<T> _logger;
+        public BaseController(ILogger<T> logger)
         {
             _logger = logger;
         }

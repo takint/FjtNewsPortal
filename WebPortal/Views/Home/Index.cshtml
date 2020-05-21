@@ -180,7 +180,9 @@
             {
                 int randNews = rand.Next(0, Model.NewFeeds.Count);
                 <li class="list-group-item">
-                    <h5><a href="@Model.NewFeeds[randNews].Id">@Model.NewFeeds[randNews].Title.Text</a></h5>
+                    <h5>
+                        @Html.ActionLink(Model.NewFeeds[randNews].Title.Text, "Index", "Article", new { articleSlug = Model.NewFeeds[randNews].Id })
+                    </h5>
                     <div class="news-box">
                         @Html.Raw(Model.NewFeeds[randNews].Summary.Text)
                     </div>
@@ -197,7 +199,9 @@
             <ul>
                 @for (int i = 0; i < 7; i++)
                 {
-                    <li><a href="@Model.NewFeeds[i].Id">@Model.NewFeeds[i].Title.Text</a></li>
+                    <li>
+                        @Html.ActionLink(Model.NewFeeds[i].Title.Text, "Index", "Article", new { articleSlug = Model.NewFeeds[i].Id })
+                    </li>
                 }
             </ul>
         </div>
@@ -211,7 +215,9 @@
             <ul>
                 @for (int i = 7; i < 14; i++)
                 {
-                    <li><a href="@Model.NewFeeds[i].Id">@Model.NewFeeds[i].Title.Text</a></li>
+                    <li>
+                        @Html.ActionLink(Model.NewFeeds[i].Title.Text, "Index", "Article", new { articleSlug = Model.NewFeeds[i].Id })
+                    </li>
                 }
             </ul>
         </div>
@@ -239,7 +245,9 @@
             <ul>
                 @for (int i = 14; i < 21; i++)
                 {
-                    <li><a href="@Model.NewFeeds[i].Id">@Model.NewFeeds[i].Title.Text</a></li>
+                    <li>
+                        @Html.ActionLink(Model.NewFeeds[i].Title.Text, "Index", "Article", new { articleSlug = Model.NewFeeds[i].Id })
+                    </li>
                 }
             </ul>
         </div>
@@ -251,9 +259,11 @@
         <div class="list-news-banner">&nbsp;</div>
         <div class="list-news-box">
             <ul>
-                @for (int i = 18; i < 25; i++)
+                @for (int i = 11; i < 18; i++)
                 {
-                    <li><a href="@Model.NewFeeds[i].Id">@Model.NewFeeds[i].Title.Text</a></li>
+                    <li>
+                        @Html.ActionLink(Model.NewFeeds[i].Title.Text, "Index", "Article", new { articleSlug = Model.NewFeeds[i].Id })
+                    </li>
                 }
             </ul>
         </div>
@@ -267,7 +277,9 @@
             <ul>
                 @for (int i = 0; i < 7; i++)
                 {
-                    <li><a href="@Model.NewFeeds[i].Id">@Model.NewFeeds[i].Title.Text</a></li>
+                    <li>
+                        @Html.ActionLink(Model.NewFeeds[i].Title.Text, "Index", "Article", new { articleSlug = Model.NewFeeds[i].Id })
+                    </li>
                 }
             </ul>
         </div>
@@ -283,7 +295,9 @@
             <ul>
                 @for (int i = 0; i < 7; i++)
                 {
-                    <li><a href="@Model.NewFeeds[i].Id">@Model.NewFeeds[i].Title.Text</a></li>
+                    <li>
+                        @Html.ActionLink(Model.NewFeeds[i].Title.Text, "Index", "Article", new { articleSlug = Model.NewFeeds[i].Id })
+                    </li>
                 }
             </ul>
         </div>
@@ -296,7 +310,9 @@
             <ul>
                 @for (int i = 0; i < 7; i++)
                 {
-                    <li><a href="@Model.NewFeeds[i].Id">@Model.NewFeeds[i].Title.Text</a></li>
+                    <li>
+                        @Html.ActionLink(Model.NewFeeds[i].Title.Text, "Index", "Article", new { articleSlug = Model.NewFeeds[i].Id })
+                    </li>
                 }
             </ul>
         </div>
@@ -309,7 +325,9 @@
             <ul>
                 @for (int i = 0; i < 7; i++)
                 {
-                    <li><a href="@Model.NewFeeds[i].Id">@Model.NewFeeds[i].Title.Text</a></li>
+                    <li>
+                        @Html.ActionLink(Model.NewFeeds[i].Title.Text, "Index", "Article", new { articleSlug = Model.NewFeeds[i].Id })
+                    </li>
                 }
             </ul>
         </div>

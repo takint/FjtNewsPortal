@@ -1,23 +1,26 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using System.ServiceModel.Syndication;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Xml;
 using ConduitPortal.Services;
+using HtmlAgilityPack;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using WebPortal.Models;
 
 namespace WebPortal.Controllers
 {
-    public class HomeController : BaseController
+    public class HomeController : BaseController<HomeController>
     {
 
         private readonly IArticleService _articleService;
         private HomePageViewModel vmHome;
+
         public HomeController(ILogger<HomeController> logger, IArticleService articleService)
             : base(logger)
         {
@@ -36,16 +39,21 @@ namespace WebPortal.Controllers
 
         private void ReadNewFeeds()
         {
-            XmlReader reader = XmlReader.Create("D:\\Workshop\\GitRepo\\FjtNewsPortal\\WebPortal\\wwwroot\\assets\\tin-moi-nhat.rss");
+            StreamReader sr = new StreamReader("./wwwroot/rss/tin-moi-nhat.rss");
+            XmlReader reader = XmlReader.Create(sr);
             vmHome.NewFeeds = SyndicationFeed.Load(reader).Items.ToList();
+            sr.Close();
 
-
-            reader = XmlReader.Create("D:\\Workshop\\GitRepo\\FjtNewsPortal\\WebPortal\\wwwroot\\assets\\startup.rss");
+            sr = new StreamReader("./wwwroot/rss/startup.rss");
+            reader = XmlReader.Create(sr);
             vmHome.BusinessNews = SyndicationFeed.Load(reader).Items.ToList();
+            sr.Close();
 
-            reader = XmlReader.Create("D:\\Workshop\\GitRepo\\FjtNewsPortal\\WebPortal\\wwwroot\\assets\\kinh-doanh.rss");
+            sr = new StreamReader("./wwwroot/rss/kinh-doanh.rss");
+            reader = XmlReader.Create(sr);
             vmHome.ShoppingNews = SyndicationFeed.Load(reader).Items.ToList();
 
+            sr.Close();
             reader.Close();
         }
 
