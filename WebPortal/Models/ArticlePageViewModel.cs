@@ -10,9 +10,12 @@ namespace WebPortal.Models
     {
         public ArticleViewModel ArticleVM { get; set; }
 
+        public List<ArticleViewModel> RelatedArticle { get; set; }
+
         public ArticlePageViewModel()
         {
             ArticleVM = new ArticleViewModel();
+            RelatedArticle = new List<ArticleViewModel>();
         }
     }
 }

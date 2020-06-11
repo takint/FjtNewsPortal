@@ -6,6 +6,10 @@ for details on configuring this project to bundle and minify static web assets. 
 /*Secondary color #383838*/
 /*Gray color #d1cfd0*/
 
+h1 {
+    color: #ce0000;
+}
+
 img {
     width: 100%;
 }

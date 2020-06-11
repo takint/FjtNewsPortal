@@ -4,5 +4,37 @@
     ViewData["Title"] = "VNToday - " + Model.ArticleVM.Title;
 }
 
-<h1>@Model.ArticleVM.Title</h1>
-@Html.Raw(Model.ArticleVM.Body)
+@section PageStyles{
+    <link rel="stylesheet" href="~/css/article.css" />
+}
+
+<div class="row">
+    <div class="col-md-2">
+    </div>
+    <div class="col-md-5">
+        <h1>@Model.ArticleVM.Title</h1>
+        <p>
+            <span class="published-time">@Model.ArticleVM.CreatedDate.ToLongDateString() - @Model.ArticleVM.CreatedDate.ToShortTimeString()</span>
+        </p>
+        @Html.Raw(Model.ArticleVM.Body)
+        <ul class="related-news">
+            @foreach (var art in Model.RelatedArticle)
+            {
+                <li>
+                    @Html.ActionLink(art.Title, "Index", "Article", new { articleSlug = art.Slug })
+                </li>
+            }
+        </ul>
+    </div>
+    <div class="col-md-3">
+        <img class="adv-img" src="~/assets/adv1.png" />
+        <img class="adv-img" src="~/assets/adv2.png" />
+        <img class="adv-img" src="~/assets/adv3.png" />
+        <img class="adv-img" src="~/assets/adv4.png" />
+        <img class="adv-img" src="~/assets/adv5.png" />
+    </div>
+    <div class="col-md-2">
+        <img class="adv-img" src="~/assets/adv7.png" />
+        <img class="adv-img" src="~/assets/adv8.png" />
+    </div>
+</div>
