@@ -1,11 +1,11 @@
-﻿using FjtFramework.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using ConduitPortal.ViewModels;
+using FjtFramework.Interfaces;
+using System.Threading.Tasks;
 
 namespace ConduitPortal.Services
 {
     public interface IArticleService : IBaseService
     {
+        Task<ArticleViewModel> GetArticleBySlug(string slug);
     }
 }

@@ -1,0 +1,20 @@
+﻿/*Primary color #ce0000*/
+/*Secondary color #383838*/
+/*Gray color #d1cfd0*/
+
+span.published-time {
+    color: #383838;
+}
+
+img.adv-img {
+    margin-bottom: 1rem;
+}
+
+ul.related-news {
+    list-style: none;
+    padding: 0;
+}
+
+    ul.related-news li {
+        margin: 0.5rem 0;
+    }

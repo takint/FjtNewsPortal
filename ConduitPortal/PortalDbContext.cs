@@ -12,7 +12,7 @@ namespace ConduitPortal
         }
 
         // This constructor is for unit testing mock
-        public PortalDbContext()
+        public PortalDbContext() : base()
         { }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -29,6 +29,12 @@ namespace ConduitPortal
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             base.OnConfiguring(optionsBuilder);
+
+            // Local use only
+            if (!optionsBuilder.IsConfigured)
+            {
+                optionsBuilder.UseSqlServer(@"Data Source=.\MSSQLSERVER17;Initial Catalog=NewsPortalDb;User ID=sa;Password=123;Persist Security Info=True;MultipleActiveResultSets=True");
+            }
         }
 
         public virtual DbSet<ArticleModel> Articles { get; set; }

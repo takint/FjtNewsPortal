@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using ConduitPortal.Mapping;
 using ConduitPortal.Models;
 using ConduitPortal.Validation;
 using FjtFramework.Cores;
@@ -6,7 +7,7 @@ using FluentValidation;
 
 namespace ConduitPortal.ViewModels
 {
-    public class ArticleViewModel : BaseViewModel
+    public class ArticleViewModel : BaseViewModel, ICreateMapping
     {
         public string Slug { get; set; }
 

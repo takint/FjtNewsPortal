@@ -1,8 +1,10 @@
 ﻿using ConduitPortal.Services;
+using ConduitPortal.ViewModels;
 using HtmlAgilityPack;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System.Linq;
+using System.Threading.Tasks;
 using WebPortal.Models;
 
 namespace WebPortal.Controllers
@@ -23,18 +25,28 @@ namespace WebPortal.Controllers
         }
 
 
-        public IActionResult Index(string articleSlug)
+        public async Task<IActionResult> Index(string articleSlug)
+        {
+            //vmArticle.ArticleVM = await _articleService.GetByIdAsync<ArticleViewModel>(4);
+            GetData(articleSlug);
+            return View(vmArticle);
+        }
+
+        private void GetData(string webUrl)
         {
             HtmlWeb web = new HtmlWeb();
-            HtmlDocument htmlDoc = web.Load(articleSlug);
+            HtmlDocument htmlDoc = web.Load(webUrl);
             var article = htmlDoc.DocumentNode.Descendants("article")
                                            .First(doc => doc.HasClass("fck_detail"));
             var title = htmlDoc.DocumentNode.Descendants("h1")
                                            .First(doc => doc.HasClass("title-detail"));
-
+            //tam-trang-khi-yeu-kiet-tac-tu-nhung-manh-ghep
             vmArticle.ArticleVM.Title = title.InnerText;
             vmArticle.ArticleVM.Body = article.OuterHtml;
+        }
 
+        public IActionResult CultureConnect()
+        {
             return View(vmArticle);
         }
     }
