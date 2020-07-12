@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using ConduitPortal.ViewModels;
+using System.Collections.Generic;
 using System.ServiceModel.Syndication;
 
 namespace WebPortal.Models
@@ -22,11 +23,11 @@ namespace WebPortal.Models
             };
         }
 
-        public List<SyndicationItem> NewFeeds { get; set; }
+        public List<ArticleViewModel> NewFeeds { get; set; }
 
-        public List<SyndicationItem> BusinessNews { get; set; }
+        public List<ArticleViewModel> BusinessNews { get; set; }
 
-        public List<SyndicationItem> ShoppingNews { get; set; }
+        public List<ArticleViewModel> ShoppingNews { get; set; }
 
         public List<string> MidPageAdv { get; set; }
 

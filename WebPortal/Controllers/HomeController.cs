@@ -8,10 +8,12 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Xml;
 using ConduitPortal.Services;
+using ConduitPortal.ViewModels;
 using HtmlAgilityPack;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using WebPortal.Models;
+using WebPortal.Utils;
 
 namespace WebPortal.Controllers
 {
@@ -31,30 +33,17 @@ namespace WebPortal.Controllers
             vmHome.FooterLogoImage = "/assets/portal-foot-logo.png";
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            ReadNewFeeds();
+            await ReadNewFeeds();
             return View(vmHome);
         }
 
-        private void ReadNewFeeds()
+        private async Task ReadNewFeeds()
         {
-            StreamReader sr = new StreamReader("./wwwroot/rss/tin-moi-nhat.rss");
-            XmlReader reader = XmlReader.Create(sr);
-            vmHome.NewFeeds = SyndicationFeed.Load(reader).Items.ToList();
-            sr.Close();
-
-            sr = new StreamReader("./wwwroot/rss/startup.rss");
-            reader = XmlReader.Create(sr);
-            vmHome.BusinessNews = SyndicationFeed.Load(reader).Items.ToList();
-            sr.Close();
-
-            sr = new StreamReader("./wwwroot/rss/kinh-doanh.rss");
-            reader = XmlReader.Create(sr);
-            vmHome.ShoppingNews = SyndicationFeed.Load(reader).Items.ToList();
-
-            sr.Close();
-            reader.Close();
+            vmHome.NewFeeds = await PortalUtil.LoadNewsFromRss();
+            vmHome.BusinessNews = await PortalUtil.LoadNewsFromRss("./wwwroot/rss/kinh-doanh.rss");
+            vmHome.ShoppingNews = await PortalUtil.LoadNewsFromRss("./wwwroot/rss/startup.rss");
         }
 
         public IActionResult Privacy()
